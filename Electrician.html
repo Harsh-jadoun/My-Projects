@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrician List</title>
+    <style>
+         header {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            position: relative;
+        }
+        
+        header .logo img {
+            position: absolute;
+            height: 100px;
+            width: 150px;
+            margin-right: 20px;
+        }
+        
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Main Section */
+        .main {
+            text-align: center;
+            margin-top: 160px;
+            background-color: black;
+            height: 300px;
+        }
+        
+        .main h1 {
+            margin-bottom: 20px;
+            font-size: 50px;
+            color: white;
+        }
+        
+        .search-box {
+            display: inline-flex;
+            gap: 10px;
+        }
+        
+        .search-box input {
+            padding: 10px;
+            width: 220px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .search-box button {
+            padding: 10px 20px;
+            border: none;
+            background: #27ae60;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .search-box button:hover {
+            background: #219150;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: black;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .electrician-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        .electrician-card {
+            background: transparent;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid white;
+            box-shadow: 0 2px 10px rgba(255,255,255,0.2);
+        }
+
+        .electrician-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            background: white;
+            padding: 5px;
+        }
+
+        .electrician-card h3 {
+            margin: 10px 0 5px;
+            color: white;
+        }
+
+        .electrician-card p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="Local Job Connect">
+        </div>
+       
+        <nav>
+              <div class="search-box">
+            <input type="text" placeholder="Enter skill or job (e.g. driver, cook)">
+            <input type="text" placeholder="Enter location or pincode">
+            <button onclick="searchWorkers()">Search</button>
+
+<div id="results"></div>
+
+
+        </div>
+            <a href="localjob.html">Home</a>
+            <a href="localjob.html">About Us</a>
+            <a href="localjob.html">Contact Us</a>
+        </nav>
+    </header>
+    <h1>Electrician List</h1>
+
+    <div class="electrician-container">
+        <!-- Row 1 -->
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Arun Kumar</h3>
+            <p>Age: 35</p>
+            <p>Mobile: 9876543210</p>
+            <p>Profession: Home Electrician</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Sunil Verma</h3>
+            <p>Age: 40</p>
+            <p>Mobile: 9123456780</p>
+            <p>Profession: Industrial Electrician</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Ravi Sharma</h3>
+            <p>Age: 30</p>
+            <p>Mobile: 9988776655</p>
+            <p>Profession: Wiring Specialist</p>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Mohit Singh</h3>
+            <p>Age: 28</p>
+            <p>Mobile: 9876501234</p>
+            <p>Profession: Appliance Repair</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Vikas Yadav</h3>
+            <p>Age: 33</p>
+            <p>Mobile: 9812345678</p>
+            <p>Profession: Lighting Expert</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Rahul Gupta</h3>
+            <p>Age: 36</p>
+            <p>Mobile: 9123459876</p>
+            <p>Profession: Panel Technician</p>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Sanjay Patel</h3>
+            <p>Age: 29</p>
+            <p>Mobile: 9911223344</p>
+            <p>Profession: Circuit Repair</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Deepak Jain</h3>
+            <p>Age: 31</p>
+            <p>Mobile: 9001122334</p>
+            <p>Profession: Solar Panel Technician</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Karan Thakur</h3>
+            <p>Age: 38</p>
+            <p>Mobile: 9876112233</p>
+            <p>Profession: Power Systems Expert</p>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Ramesh Chauhan</h3>
+            <p>Age: 36</p>
+            <p>Mobile: 9822334455</p>
+            <p>Profession: CCTV Installer</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Neha Mehta</h3>
+            <p>Age: 30</p>
+            <p>Mobile: 9011223344</p>
+            <p>Profession: Electric Design Engineer</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Amit Yadav</h3>
+            <p>Age: 33</p>
+            <p>Mobile: 9877001122</p>
+            <p>Profession: Transformer Technician</p>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Anita Desai</h3>
+            <p>Age: 42</p>
+            <p>Mobile: 9123450012</p>
+            <p>Profession: Electrical Safety Inspector</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Manoj Sinha</h3>
+            <p>Age: 34</p>
+            <p>Mobile: 9876009988</p>
+            <p>Profession: Generator Technician</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Ritika Das</h3>
+            <p>Age: 25</p>
+            <p>Mobile: 9998887776</p>
+            <p>Profession: Home Electrician</p>
+        </div>
+
+        <!-- Row 6 -->
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Suresh Naik</h3>
+            <p>Age: 37</p>
+            <p>Mobile: 9822001100</p>
+            <p>Profession: Power Line Technician</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Lata Sharma</h3>
+            <p>Age: 29</p>
+            <p>Mobile: 9008877665</p>
+            <p>Profession: Appliance Repair</p>
+        </div>
+        <div class="electrician-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3067/3067834.png" alt="Electrician Icon">
+            <h3>Vivek Tiwari</h3>
+            <p>Age: 39</p>
+            <p>Mobile: 9911887766</p>
+            <p>Profession: Electrical Maintenance</p>
+        </div>
+    </div>
+
+</body>
+</html>
