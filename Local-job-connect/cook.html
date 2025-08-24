@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook List</title>
+    <style>
+         header {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            position: relative;
+        }
+        
+        header .logo img {
+            position: absolute;
+            height: 100px;
+            width: 150px;
+            margin-right: 20px;
+        }
+        
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Main Section */
+        .main {
+            text-align: center;
+            margin-top: 160px;
+            background-color: black;
+            height: 300px;
+        }
+        
+        .main h1 {
+            margin-bottom: 20px;
+            font-size: 50px;
+            color: white;
+        }
+        
+        .search-box {
+            display: inline-flex;
+            gap: 10px;
+        }
+        
+        .search-box input {
+            padding: 10px;
+            width: 220px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .search-box button {
+            padding: 10px 20px;
+            border: none;
+            background: #27ae60;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .search-box button:hover {
+            background: #219150;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: black;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .cook-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .cook-card {
+            background: black;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 2px solid white;
+        }
+
+        .cook-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .cook-card h3 {
+            margin: 10px 0 5px;
+            color: white;
+        }
+
+        .cook-card p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="Local Job Connect">
+        </div>
+       
+        <nav>
+              <div class="search-box">
+            <input type="text" placeholder="Enter skill or job (e.g. driver, cook)">
+            <input type="text" placeholder="Enter location or pincode">
+            <button onclick="searchWorkers()">Search</button>
+
+<div id="results"></div>
+
+
+        </div>
+            <a href="localjob.html">Home</a>
+            <a href="localjob.html">About Us</a>
+            <a href="localjob.html">Contact Us</a>
+        </nav>
+    </header>
+    <h1>Cook List</h1>
+
+    <div class="cook-container">
+        <!-- 18 cooks (3 per row × 6 rows) -->
+        <!-- You can copy and edit details as needed -->
+        <!-- Row 1 -->
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Rajesh Sharma</h3>
+            <p>Age: 45</p>
+            <p>Mobile: 9876543210</p>
+            <p>Profession: Head Chef</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Amit Kumar</h3>
+            <p>Age: 38</p>
+            <p>Mobile: 9123456780</p>
+            <p>Profession: Sous Chef</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Ravi Singh</h3>
+            <p>Age: 30</p>
+            <p>Mobile: 9988776655</p>
+            <p>Profession: Pastry Chef</p>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Suresh Yadav</h3>
+            <p>Age: 40</p>
+            <p>Mobile: 9871234560</p>
+            <p>Profession: Line Cook</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Deepak Mehta</h3>
+            <p>Age: 28</p>
+            <p>Mobile: 9812345670</p>
+            <p>Profession: Grill Cook</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Ajay Verma</h3>
+            <p>Age: 35</p>
+            <p>Mobile: 9900112233</p>
+            <p>Profession: Prep Cook</p>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Karan Gupta</h3>
+            <p>Age: 32</p>
+            <p>Mobile: 9876501234</p>
+            <p>Profession: Personal Chef</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Manoj Patel</h3>
+            <p>Age: 29</p>
+            <p>Mobile: 9812309876</p>
+            <p>Profession: Catering Chef</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Vivek Jain</h3>
+            <p>Age: 41</p>
+            <p>Mobile: 9870987654</p>
+            <p>Profession: Commis Chef</p>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Pawan Kumar</h3>
+            <p>Age: 27</p>
+            <p>Mobile: 9988007766</p>
+            <p>Profession: Tandoor Chef</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Arjun Mehra</h3>
+            <p>Age: 36</p>
+            <p>Mobile: 9876549999</p>
+            <p>Profession: Fry Cook</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Rohit Sharma</h3>
+            <p>Age: 34</p>
+            <p>Mobile: 9811223344</p>
+            <p>Profession: Hotel Chef</p>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Anil Yadav</h3>
+            <p>Age: 39</p>
+            <p>Mobile: 9977665544</p>
+            <p>Profession: Food Truck Cook</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Harish Kumar</h3>
+            <p>Age: 31</p>
+            <p>Mobile: 9988775544</p>
+            <p>Profession: BBQ Chef</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Sachin Verma</h3>
+            <p>Age: 33</p>
+            <p>Mobile: 9811998877</p>
+            <p>Profession: Breakfast Cook</p>
+        </div>
+
+        <!-- Row 6 -->
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Ashok Tiwari</h3>
+            <p>Age: 37</p>
+            <p>Mobile: 9900887766</p>
+            <p>Profession: Restaurant Chef</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Mohit Joshi</h3>
+            <p>Age: 35</p>
+            <p>Mobile: 9877788888</p>
+            <p>Profession: Private Cook</p>
+        </div>
+        <div class="cook-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Cook Icon">
+            <h3>Aditya Chauhan</h3>
+            <p>Age: 29</p>
+            <p>Mobile: 9123456789</p>
+            <p>Profession: Banquet Chef</p>
+        </div>
+    </div>
+
+</body>
+</html>
